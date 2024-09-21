@@ -5,7 +5,7 @@ import StepsSidebar from './components/StepsSidebar';
 import EmailSidebar from './components/EmailSidebar';
 import EmailScreen from './components/EmailScreen';
 import FormBuilder from './components/FormBuilder';
-import shapeImage from 'src/assets/shapes.png'; // Adjust the path if needed
+import shapeImage from './assets/shapes.png';
 import './App.css';
 
 const App = () => {
