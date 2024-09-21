@@ -5,13 +5,14 @@ import StepsSidebar from './components/StepsSidebar';
 import EmailSidebar from './components/EmailSidebar';
 import EmailScreen from './components/EmailScreen';
 import FormBuilder from './components/FormBuilder';
+import shapeImage from 'src/assets/shapes.png'; // Adjust the path if needed
 import './App.css';
 
 const App = () => {
     const [title, setTitle] = useState('Welcome to our form');
     const [description, setDescription] = useState('This is a description of the form');
     const [buttonText, setButtonText] = useState('Start');
-    const [image, setImage] = useState('src/assets/shapes.png');
+    const [image, setImage] = useState(shapeImage);
     const [showWelcomeScreen, setShowWelcomeScreen] = useState(false);
     const [showEmailSidebar, setShowEmailSidebar] = useState(false);
     const [showFormBuilder, setShowFormBuilder] = useState(true);
