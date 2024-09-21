@@ -2,14 +2,15 @@
 import React from 'react';
 import './WelcomeScreen.css'; // Import the CSS file
 
-const WelcomeScreen = ({ heading, setHeading, description, setDescription, buttonText, image }) => {
+
+const WelcomeScreen = ({ title, setTitle, description, setDescription, buttonText, image }) => {
     return (
         <div className="welcome-screen">
             <div className="text-container">
                 <input
                     type="text"
-                    value={heading}
-                    onChange={(e) => setHeading(e.target.value)}
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
                     className="text-box heading-box"
                 />
                 <input

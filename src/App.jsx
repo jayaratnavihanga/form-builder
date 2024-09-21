@@ -5,16 +5,16 @@ import Sidebar from './components/Sidebar';
 import './App.css'; // Import additional CSS if needed
 
 const App = () => {
-    const [heading, setHeading] = useState('Welcome to our form');
+    const [title, setTitle] = useState('Welcome to our form');
     const [description, setDescription] = useState('This is a description of the form');
     const [buttonText, setButtonText] = useState('Start');
-    const [image, setImage] = useState('');
+    const [image, setImage] = useState('src/assets/shapes.png');
 
     return (
         <div className="app">
             <Sidebar
-                heading={heading}
-                setHeading={setHeading}
+                title={title}
+                setTitle={setTitle}
                 description={description}
                 setDescription={setDescription}
                 buttonText={buttonText}
@@ -24,8 +24,8 @@ const App = () => {
             />
             <div className="main-content">
                 <WelcomeScreen
-                    heading={heading}
-                    setHeading={setHeading}
+                    title={title}
+                    setTitle={setTitle}
                     description={description}
                     setDescription={setDescription}
                     buttonText={buttonText}

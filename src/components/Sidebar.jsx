@@ -1,8 +1,9 @@
 // src/components/Sidebar.jsx
 import React from 'react';
+import { FiSettings, FiUpload } from 'react-icons/fi'; // Import the Settings and Upload icons
 import './Sidebar.css'; // Import the CSS file
 
-const Sidebar = ({ heading, setHeading, description, setDescription, buttonText, setButtonText, image, setImage }) => {
+const Sidebar = ({ title, setTitle, description, setDescription, buttonText, setButtonText, image, setImage }) => {
     const handleImageUpload = (e) => {
         const file = e.target.files[0];
         if (file) {
@@ -16,14 +17,17 @@ const Sidebar = ({ heading, setHeading, description, setDescription, buttonText,
 
     return (
         <div className="sidebar">
-            <h2>Menu</h2>
+            <div className="settings-header">
+                <FiSettings className="settings-icon" />
+                <span>Settings</span>
+            </div>
             <div className="input-group">
-                <label htmlFor="heading">Heading:</label>
+                <label htmlFor="title">Title:</label>
                 <input
                     type="text"
-                    id="heading"
-                    value={heading}
-                    onChange={(e) => setHeading(e.target.value)}
+                    id="title"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
                     className="sidebar-input"
                 />
             </div>
@@ -47,16 +51,20 @@ const Sidebar = ({ heading, setHeading, description, setDescription, buttonText,
                     className="sidebar-input"
                 />
             </div>
-            <div className="input-group">
-                <label htmlFor="image-upload">Upload Image:</label>
-                <input
-                    type="file"
-                    id="image-upload"
-                    accept="image/*"
-                    onChange={handleImageUpload}
-                    className="sidebar-input"
-                />
-            </div>
+            <button
+                className="upload-button"
+                onClick={() => document.getElementById('file-upload').click()} // Trigger the hidden file input
+            >
+                <FiUpload className="upload-icon" />
+                Upload
+            </button>
+            <input
+                type="file"
+                id="file-upload"
+                accept="image/*"
+                onChange={handleImageUpload}
+                style={{ display: 'none' }} // Hide the default file input
+            />
         </div>
     );
 };
