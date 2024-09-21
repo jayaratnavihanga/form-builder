@@ -1,9 +1,9 @@
 // src/components/Sidebar.jsx
 import React from 'react';
-import { FiSettings, FiUpload } from 'react-icons/fi'; // Import the Settings and Upload icons
-import './Sidebar.css'; // Import the CSS file
+import { FiSettings, FiUpload, FiX } from 'react-icons/fi'; // Import the close icon
+import './Sidebar.css';
 
-const Sidebar = ({ title, setTitle, description, setDescription, buttonText, setButtonText, image, setImage }) => {
+const Sidebar = ({ title, setTitle, description, setDescription, buttonText, setButtonText, image, setImage, onCloseClick }) => {
     const handleImageUpload = (e) => {
         const file = e.target.files[0];
         if (file) {
@@ -17,6 +17,9 @@ const Sidebar = ({ title, setTitle, description, setDescription, buttonText, set
 
     return (
         <div className="sidebar">
+            <div className="close-button" onClick={onCloseClick}>
+                <FiX className="close-icon" />
+            </div>
             <div className="settings-header">
                 <FiSettings className="settings-icon" />
                 <span>Settings</span>

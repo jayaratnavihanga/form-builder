@@ -2,7 +2,6 @@
 import React from 'react';
 import './WelcomeScreen.css'; // Import the CSS file
 
-
 const WelcomeScreen = ({ title, setTitle, description, setDescription, buttonText, image }) => {
     return (
         <div className="welcome-screen">
