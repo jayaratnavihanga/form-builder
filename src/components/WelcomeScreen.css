@@ -1,0 +1,64 @@
+/* src/components/WelcomeScreen.css */
+.welcome-screen {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px; /* Add space between text boxes and image */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text-box {
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 8px;
+    transition: border-color 0.3s;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.text-box:hover {
+    border-color: blue;
+}
+
+.heading-box {
+    font-size: 32px; /* Increased font size */
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.description-box {
+    font-size: 20px; /* Increased font size */
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.uploaded-image {
+    width: 400px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners for the image */
+}
+
+.start-button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Space between button and text boxes */
+}
+
+.start-button:hover {
+    background-color: #333; /* Darker black on hover */
+}
