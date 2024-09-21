@@ -1,4 +1,4 @@
-.sidebar {
+.email-sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -50,36 +50,14 @@
 .sidebar-input {
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 6px 8px;
+    padding: 4px 6px;
     background: #fff;
     color: #333;
-    font-size: 14px;
+    font-size: 12px;
     transition: border-color 0.3s;
+    min-height: 30px;
 }
 
 .sidebar-input:hover {
     border-color: #888;
-}
-
-.upload-button {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 8px;
-    background-color: #f0f0f0;
-    color: black;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: fit-content;
-}
-
-.upload-button:hover {
-    background-color: #e0e0e0;
-}
-
-.upload-icon {
-    font-size: 16px;
-    color: black;
 }

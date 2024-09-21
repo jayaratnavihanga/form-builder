@@ -1,6 +1,5 @@
-// src/components/Sidebar.jsx
 import React from 'react';
-import { FiSettings, FiUpload, FiX } from 'react-icons/fi'; // Import the close icon
+import { FiSettings, FiUpload, FiX } from 'react-icons/fi';
 import './Sidebar.css';
 
 const Sidebar = ({ title, setTitle, description, setDescription, buttonText, setButtonText, image, setImage, onCloseClick }) => {
@@ -56,7 +55,7 @@ const Sidebar = ({ title, setTitle, description, setDescription, buttonText, set
             </div>
             <button
                 className="upload-button"
-                onClick={() => document.getElementById('file-upload').click()} // Trigger the hidden file input
+                onClick={() => document.getElementById('file-upload').click()}
             >
                 <FiUpload className="upload-icon" />
                 Upload
@@ -66,7 +65,7 @@ const Sidebar = ({ title, setTitle, description, setDescription, buttonText, set
                 id="file-upload"
                 accept="image/*"
                 onChange={handleImageUpload}
-                style={{ display: 'none' }} // Hide the default file input
+                style={{ display: 'none' }}
             />
         </div>
     );

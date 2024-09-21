@@ -1,0 +1,59 @@
+.email-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.editable-text-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editable-text {
+    width: 100%;
+    padding: 10px;
+    min-height: 40px;
+    border: none;
+    text-align: left;
+    cursor: text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editable-text.first-field {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.editable-text.second-field {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.editable-text:last-child {
+    min-height: 40px;
+}
+
+.editable-text:focus {
+    outline: none;
+}
+
+.placeholder {
+    color: #aaa;
+    position: absolute;
+    pointer-events: none;
+    top: 10px;
+    left: 10px;
+}
